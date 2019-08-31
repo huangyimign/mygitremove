@@ -1,0 +1,38 @@
+git:版本控制软件
+分布式版本控制软件
+
+命令：
+	git add:将本地文件增加到暂存区
+	git commit ：将暂存区的内容提交到本地仓库（本地分支，默认分支mastser）
+	git push：将本地仓库的内容推送到远程仓库（远程分支）
+	git pull： 将远程仓库（远程分支）的内容推送到本地仓库（本地分支）
+
+
+安装git:
+	msysgit.github.io
+
+配置1path:
+	将Bin目录放到path中。
+配置git:
+	右键 git bash
+	配置本地用户和邮箱
+	git config  --global user.name "name"
+	git config --global user.email "qq邮箱"
+
+搭建git服务器（远程仓库）：
+	远程的托管网站（github官网）
+为了在本地和远程仓库之间进行免密钥登录，可以配置ssh
+配置ssh:
+	先在本地配置ssh，在发送给远程仓库
+	ssh-keygen -t rsa  -C 邮箱号 之后一直回车
+	发送给远程：
+		GitHub 找setting -ssh and .........
+		title中任意
+		key中输入刚才在本地中生存的id_rsa.pub中的文件
+
+测试连通性：
+	ssh -Tgit@github.com
+	如果在本地和远程成功通信，则可以在/.ssh目录中发现known_hosts文件
+	 
+	
+
